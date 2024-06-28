@@ -19,7 +19,6 @@ pipeline {
             }
         }       
 
-
         stage('Check PR Description') {
             steps {
                 script {

@@ -26,7 +26,7 @@ pipeline {
                     def prDescription = ghprbPullDescription
                     echo "PR Description: ${prDescription}"
 
-                    // Check if PR modifies permission for the user!
+                    // Check if PR modifies permission for the user!!
                     if (!prDescription.contains("modify permission")) {
                         error("PR does not contain 'modify permission' in the description.")
                     }

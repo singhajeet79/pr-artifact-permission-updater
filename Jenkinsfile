@@ -12,6 +12,14 @@ pipeline {
     }
 
     stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }       
+
+
         stage('Check PR Description') {
             steps {
                 script {

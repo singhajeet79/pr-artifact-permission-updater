@@ -32,10 +32,10 @@ pipeline {
                 script {
                     // Example command to modify permissions using Artifactory REST API
                     sh """
-                    curl -u <username>:<password> -X PUT "${ARTIFACTORY_URL}/api/security/permissions/${REPO_NAME}" -d '{
+                    curl -u e5081:pswdJan1! -X PUT "${ARTIFACTORY_URL}/api/security/permissions/${REPO_NAME}" -d '{
                         "principals": {
                             "users": {
-                                "<user>": ["r"]
+                                "e5081": ["r"]
                             }
                         }
                     }'
@@ -50,7 +50,7 @@ pipeline {
                 script {
                     // Test if the user can download the artifact
                     sh """
-                    curl -u <username>:<password> -O "${ARTIFACTORY_URL}/${ARTIFACT_PATH}"
+                    curl -u e5081:pswdJan1! -O "${ARTIFACTORY_URL}/${ARTIFACT_PATH}"
                     """
                     echo "Artifact downloaded successfully."
                 }
